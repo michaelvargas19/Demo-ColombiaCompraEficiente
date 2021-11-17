@@ -1,0 +1,40 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="row">
+   
+      <button mat-icon-button  aria-label="Cerrar Sesión" color="primary" 
+        (click)="verProductos()" >
+        <mat-icon>settings</mat-icon> Ver Productos
+      </button>
+
+
+      <button mat-icon-button  aria-label="Iniciar Sesión" color="primary" 
+        (click)="iniciarSesion()" *ngIf="!estaAutenticado()">
+        <mat-icon>settings</mat-icon> Iniciar Sesión
+      </button>
+
+      <button mat-icon-button  aria-label="Registrarse" color="primary" 
+        (click)="registrarse()" *ngIf="!estaAutenticado()">
+        <mat-icon>settings</mat-icon> Registrarse
+      </button>
+
+      <button mat-icon-button  aria-label="Cerrar Sesión" color="primary" 
+        (click)="cerrarSesion()" *ngIf="estaAutenticado()">
+        <mat-icon>settings</mat-icon> Cerrar Sesión
+      </button>
+    </div>
+</nav>
+    <div class="row">
+      <mat-sidenav-container class="sidenav-container"
+                                 [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+                    
+            <mat-sidenav-content>
+              <router-outlet></router-outlet>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+        
+          
+    </div>
+    
+  
+      
+  <app-modal></app-modal>

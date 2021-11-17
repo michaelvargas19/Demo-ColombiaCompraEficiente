@@ -1,0 +1,13 @@
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.AssemblyInfoInputs.cache
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.AssemblyInfo.cs
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\bin\Debug\netcoreapp3.1\Ordenes.Dominio.deps.json
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\bin\Debug\netcoreapp3.1\Ordenes.Dominio.dll
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\bin\Debug\netcoreapp3.1\Ordenes.Dominio.pdb
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\bin\Debug\netcoreapp3.1\Ordenes.Infraestructura.dll
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\bin\Debug\netcoreapp3.1\Ordenes.Infraestructura.pdb
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.csproj.AssemblyReference.cache
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.dll
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.pdb
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.csproj.CopyComplete

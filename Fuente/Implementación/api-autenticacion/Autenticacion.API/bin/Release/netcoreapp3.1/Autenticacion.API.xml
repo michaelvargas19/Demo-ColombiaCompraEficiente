@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Autenticacion.API</name>
+    </assembly>
+    <members>
+        <member name="M:Autenticacion.API.Controllers.AplicacionesController.VerRoles(System.String)">
+            <summary>Consultar aplicación</summary>
+            <param name="idAplicacion">Identificador de aplicación</param>
+            <returns>Datos de la aplicación</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.AplicacionesController.CrearAplicacion(Autenticacion.Dominio.Modelo.RequestBase{Autenticacion.Dominio.Modelo.Command.AplicacionCmd})">
+            <summary>Crear nueva aplicación</summary>
+            <param name="request))">Datos de la Aplicación</param>
+            <returns>Aplicación creada</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="202">Proceso no Completado</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.CuentaController.GetRecuperar(System.String,System.String)">
+            <summary>Obtener token JWT y enviar código al usuario</summary>
+            <param name="source">Identificador de la aplicación</param>
+            <param name="root">Usuario solicitante</param>
+            <remarks>
+            `Descripción:`  
+            ```
+                Inicia el proceso de recuperación de una cuenta, con los siguientes pasos:
+                    * Genera un código de 6 digitos
+                    * Envía el código al email del usuario
+                    * Genera un token JWT único para para el proceso
+                    * Retorna el token JWT junto a los detalles del código generado:
+                        - Longitud
+                        - Fecha de generación y expiración
+             ```
+             </remarks>
+            <returns>Detalles del código generado y token para cosumir el servicio POST 'api/cuenta/recuperar'</returns>
+            <response code="201">Código generado</response>
+            <response code="202">Generación no válida</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.CuentaController.PostRecuperar(Autenticacion.Dominio.Modelo.Command.RecuperarCuentaCmd)">
+            <summary>Recuperar cuenta con código de confirmación</summary>
+            <param name="request">Datos para recuperar la cuenta</param>
+            <remarks>
+            `Descripción:`  
+            ```
+                Continua con el proceso de recuperación de una cuenta, con los siguientes pasos:
+                    * Recibe la informaciónn del usuario, token JWT y código de verificación
+                    * Valída que el token JWT sea el mismo que se expidio para la solicitud
+                    * Valída el código de verificación
+                    * Cambia la contraseña del usuario según los datos de la solicitud
+                    * Retorna el resultado de la operación
+             ```
+             </remarks>
+            <returns>Token JWT con datos de la sesión</returns>
+            <response code="201">SOlicitud procesada</response>
+            <response code="202">Proceso Inválido</response>
+            <response code="203">Autorización inválida</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.CuentaController.Put(Autenticacion.Dominio.Modelo.Command.CuentaCmd)">
+            <summary>Actualizar contraseña de un usuario</summary>
+            <param name="cuenta">Debe incluir usuario, contraseña, confirmación y Token JWT válido</param>
+            <remarks>
+            `Descripción:`  
+            ```
+                Este servicio permite actualizar la contraseña de un ususario, apartir de un token JWT de sesión válido y datos de entrada.
+                Los pasos que se realizan son:
+                    * Recibe la informaciónn del usuario y token JWT de la sesión
+                    * Valída que el token JWT está vigente
+                    * Valída la informaión del usuario y aplicación
+                    * Actualiza la contraseña del usuario según los datos de la solicitud
+                    * Retorna el resultado de la operación
+             ```
+             </remarks>
+            <returns>Nuevo Token JWT</returns>
+            <response code="201">Contraseña actualizada</response>
+            <response code="202">Los datos de la solicitud son incorrectos</response>
+            <response code="203">Token JWT inválido</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="404">Los datos de aplicación o usuario son inválidos</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.RolesController.VerRoles(System.String)">
+            <summary>Consultar Roles por aplicación</summary>
+            <param name="idAplicacion">Identificador de aplicación</param>
+            <returns>Roles de la aplicación</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.RolesController.VerRolesPorUsuario(System.String,System.String)">
+            <summary>Consultar Roles de un Usuario</summary>
+            <param name="usuario">Nombre de ususario</param>
+            <param name="idAplicacion">Aplicación</param>
+            <returns>Roles del usuario</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.SesionesController.Post(Autenticacion.Dominio.Modelo.Command.CredencialesLogin)">
+            <summary>Iniciar sesión con usuario y contraseña</summary>
+            <remarks>
+            `Descripción:`
+            
+                Este es el servicio habilitado para el inicio de sesión, apatir de un usuario y contraseña.
+                Los pasos que se ejecutan son:
+                    * Recibir la solicitud de inicio de sesión
+                    * Validar existencia de la aplicación y Usuario
+                    * Validar permiso del usuario en la aplicación
+                    * Identificar la información del usuario
+                    * Generar token JWT de sesión
+                    * Retornar el token JWT de la sesión
+             
+            `JSON de respuesta:`
+            ```
+            {
+                 autenticacion":    Indica el resulado del inicio de sesión
+                 tokenJWT":         Token JWT generado
+                 mensaje":          Descripción del resultado
+                 bloqueada":        Indica si la cuenta LDAP está bloqueada
+                 urLdesbloqueo":    URL para desbloquear la cuenta LDAP
+             }
+             ```
+             </remarks>
+            <param name="request">Datos para el inicio de sesión</param>
+            <returns>Token JWT con datos de la sesión</returns>
+            <response code="200">Usuario autenticado</response>
+            <response code="202">Inicio de sesión inválido</response>
+            <response code="203">Cuenta LDAP bloqueada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.UsuariosController.CrearUsuario(Autenticacion.Dominio.Modelo.RequestBase{Autenticacion.Dominio.Modelo.Command.UsuarioCmd})">
+            <summary>Crear un nuevo usuario</summary>
+            <param name="request">Datos de configuración</param>
+            <returns>Configuración</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="202">Proceso no Completado</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.UsuariosController.GetConfiguracionNuevoUsuario(Autenticacion.Dominio.Modelo.Command.TokenJWT)">
+            <summary>Configuración para crear un nuevo usuario</summary>
+            <param name="token">Credenciales de acceso genéricas</param>
+            <returns>usuario creado</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="202">Proceso no Completado</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.UsuariosController.AsignarRol(Autenticacion.Dominio.Modelo.RequestBase{Autenticacion.Dominio.Modelo.Command.AsignarRolUserCmd})">
+            <summary>Asignar un rol a un usuario</summary>
+            <param name="request">Datos de configuración</param>
+            <returns>Resultado del proceso</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="202">Proceso no Completado</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Autenticacion.API.Controllers.UsuariosController.RemoverAsignarRol(Autenticacion.Dominio.Modelo.RequestBase{Autenticacion.Dominio.Modelo.Command.AsignarRolUserCmd})">
+            <summary>Asignar un rol a un usuario</summary>
+            <param name="request">Datos de configuración</param>
+            <returns>Resultado del proceso</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="202">Proceso no Completado</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+    </members>
+</doc>

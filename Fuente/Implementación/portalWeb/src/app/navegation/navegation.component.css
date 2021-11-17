@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+.log {
+    height: 70px;
+    margin-left: 0px;
+}
+
+.row {
+    
+    margin-right: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.conftitle {
+    font-family: 'Bree Serif', serif;
+}
+
+.margintop {
+    margin-top: 5px;
+}
+
+.navbar-brand{
+    font-size: 16px;
+}
+
+button{
+    width: max-content;
+}

@@ -1,0 +1,104 @@
+<div class="content" >
+    <div fxLayout="row wrap" fxLayoutGap="grid">
+      <div fxFlex="80%" fxFlex.xs="80%" fxFlex.sm="80%" class="bigBox">
+        
+        <mat-card id="card" style="text-align: center;" fxLayoutGap="30px" >
+            <mat-card-title >
+                Formulario de registro
+            </mat-card-title>
+        
+            <mat-vertical-stepper>
+
+              <mat-step label="Datos básicos">
+                
+                <form [formGroup]="datosBasicos">
+
+                  <mat-form-field >
+                    <mat-label>Primer nombre:</mat-label>
+                        <br>
+                    <input matInput formControlName="primerNombre" placeholder="Primer nombre" required >
+                  </mat-form-field>
+                 
+                  <br>
+
+                  <mat-form-field >
+                    <mat-label>Primer apellido:</mat-label>
+                        <br>
+                    <input matInput formControlName="primerApellido" placeholder="Primer apellido" required >
+                  </mat-form-field>
+
+                  <br>
+
+                  <mat-form-field >
+                    <mat-label>Tipo Identificación:</mat-label>
+                      <br>
+                      <mat-select formControlName="tipoDocumento" placeholder="Tipo de identificación"  >
+                          <mat-option style="font-size: 12px;" disabled [value]="">Seleccione</mat-option>
+                          <mat-option *ngFor="let item of listTypeDocument" style="font-size: 12px;"
+                              [value]="item">
+                              {{item.nombre}}
+                          </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+                  
+                  <br>
+
+                  <mat-form-field >
+                    <mat-label>Identificacion:</mat-label>
+                        <br>
+                    <input matInput formControlName="identificacion" placeholder="Número de identificación"  >
+                  </mat-form-field>
+                  
+
+                </form>
+
+              </mat-step>
+
+              <mat-step label="Datos de cuenta">
+
+                <form [formGroup]="datosCuenta">
+
+                    <mat-form-field >
+                      <mat-label>Correo electrónico:</mat-label>
+                          <br>
+                      <input matInput formControlName="email" placeholder="Correo electrónico" required (change)="cambioEmail($event)">
+                    </mat-form-field>
+
+                    <br>
+                    <mat-form-field >
+                      <mat-label>Usuario:</mat-label>
+                          <br>
+                      <input matInput formControlName="usuario" placeholder="Usuario" required readonly>
+                    </mat-form-field>
+                    <br>
+                    <mat-divider></mat-divider>
+
+                    <mat-form-field >
+                      <mat-label>Contraseña:</mat-label>
+                          <br>
+                      <input matInput formControlName="contrasena" placeholder="Contraseña de acceso" required >
+                    </mat-form-field>
+
+
+                </form>
+
+            </mat-step>
+            
+            
+            </mat-vertical-stepper>
+
+
+            <mat-card-content *ngIf="mobileQuery.matches">
+                  
+            </mat-card-content>
+
+        </mat-card>
+
+        <button mat-raised-button color="primary" style="margin-right:5px;" (click)="AddUser()">Crear Usuario</button>
+
+      </div>
+    </div>
+  </div>
+
+
+<app-modal></app-modal>
