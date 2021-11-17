@@ -32,6 +32,8 @@ compra de dichos productos.
 # Componentes de la solución
 ![imagen no disponible](https://github.com/michaelvargas19/Demo-ColombiaCompraEficiente/blob/master/Fuente/Dise%C3%B1o/Diagrama%20de%20Componentes.png?raw=true)
 
+[Consultar Software Architecture Document](https://github.com/michaelvargas19/Demo-ColombiaCompraEficiente/blob/master/Documentos/SAD%204%2B1.pdf)
+
 
 *Michael Vargas*
 © 2021
