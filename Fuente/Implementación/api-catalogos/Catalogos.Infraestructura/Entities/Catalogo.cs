@@ -5,6 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Catalogos.Infraestructura.Entities
 {
+    /// <summary>
+    /// Entidad que referencia a la tabla en la base de datos
+    /// que almacena los catálogos
+    /// </summary>
     [Table("catCatalogos")]
     public class Catalogo 
     {

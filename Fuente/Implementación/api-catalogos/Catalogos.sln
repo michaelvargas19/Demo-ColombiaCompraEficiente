@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogos.API", "Catalogos.API\Catalogos.API.csproj", "{8EEF58F6-C59C-4DAF-858F-2D8553E741DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogos.API", "Catalogos.API\Catalogos.API.csproj", "{8EEF58F6-C59C-4DAF-858F-2D8553E741DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogos.Dominio", "Catalogos.Dominio\Catalogos.Dominio.csproj", "{B512EC1F-0BFB-4F50-91BA-27A756EB7BE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogos.Dominio", "Catalogos.Dominio\Catalogos.Dominio.csproj", "{B512EC1F-0BFB-4F50-91BA-27A756EB7BE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogos.Infraestructura", "Catalogos.Infraestructura\Catalogos.Infraestructura.csproj", "{C88DF3F3-BDB9-43AD-946C-C36CD0440490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalogos.Infraestructura", "Catalogos.Infraestructura\Catalogos.Infraestructura.csproj", "{C88DF3F3-BDB9-43AD-946C-C36CD0440490}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasUnitarias", "PruebasUnitarias\PruebasUnitarias.csproj", "{BEA99987-ED9D-4A3B-AD95-4B128AB1ACFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C88DF3F3-BDB9-43AD-946C-C36CD0440490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C88DF3F3-BDB9-43AD-946C-C36CD0440490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C88DF3F3-BDB9-43AD-946C-C36CD0440490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA99987-ED9D-4A3B-AD95-4B128AB1ACFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA99987-ED9D-4A3B-AD95-4B128AB1ACFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA99987-ED9D-4A3B-AD95-4B128AB1ACFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA99987-ED9D-4A3B-AD95-4B128AB1ACFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

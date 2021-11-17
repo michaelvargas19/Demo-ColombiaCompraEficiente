@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Catalogos.Dominio.IServices.Queries
 {
+    /// <summary>
+    /// Interfaz que contiene las firmas de los métodos de consulta
+    /// que acceden a los repositorios que consultan información de productos
+    /// </summary>
     public interface IProductosServiceQuery
     {
         IEnumerable<ProductoQuery> verPaginacion(int skip, int take);

@@ -10,6 +10,12 @@ namespace Ordenes.Dominio.Util
 {
     public class Utils : IUtils
     {
+
+        /// <summary>
+        /// Permite convertir la entidad Orden en un objeto Query
+        /// </summary>
+        /// <param name="orden">Entidad Orden</param>
+        /// <returns>Orden de compra</returns>
         public OrdenCompraQuery ConvertList_Orden_To_Query(OrdenCompra orden)
         {
             if (orden == null)
@@ -42,7 +48,11 @@ namespace Ordenes.Dominio.Util
 
         }
 
-
+        /// <summary>
+        /// permite convertir una lista de detalles en objetos de consulta
+        /// </summary>
+        /// <param name="detalles">Entidades de detalle</param>
+        /// <returns>Ordenes de Compra</returns>
         public IEnumerable<OrdenCompraDetalleQuery> ConvertList_Detalle_To_Query(IEnumerable<OrdenCompraDetalle> detalles)
         {
             List<OrdenCompraDetalleQuery> ordenes = new List<OrdenCompraDetalleQuery>();
@@ -54,6 +64,12 @@ namespace Ordenes.Dominio.Util
             return ordenes;
         }
 
+
+        /// <summary>
+        /// Convertir entidad detalle en un objeto de consulta
+        /// </summary>
+        /// <param name="detalle">Entidad de detalle</param>
+        /// <returns>Obejeto de detalle</returns>
         public OrdenCompraDetalleQuery Convert_Detalle_To_Query(OrdenCompraDetalle detalle)
         {
             if(detalle == null)
@@ -79,6 +95,12 @@ namespace Ordenes.Dominio.Util
         }
 
 
+
+        /// <summary>
+        /// Permite convertir una entidad producto en objeto de consulta
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns>Producto</returns>
         public ProductoQuery Convert_Producto_To_Query(Producto producto)
         {
             ProductoQuery p = new ProductoQuery();
@@ -94,7 +116,6 @@ namespace Ordenes.Dominio.Util
 
             return p;
         }
-
 
 
 

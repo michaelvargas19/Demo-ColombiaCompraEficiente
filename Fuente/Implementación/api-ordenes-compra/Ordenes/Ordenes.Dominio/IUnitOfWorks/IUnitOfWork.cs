@@ -10,20 +10,28 @@ using System.Text;
 
 namespace Ordenes.Dominio.IUnitOfWorks
 {
+    /// <summary>
+    /// IUnitOfWork es una interfaz que contiene
+    /// firmas de métodos que permiten acceder a instancias de 
+    /// los repositorios, servicios útiles, acceso al appsettings.json
+    /// y contexto de la base de datos
+    /// </summary>
     public interface IUnitOfWork : IDisposable
     {
-        // Persistencia
+        // Manejo de Transacciones en la Persistencia
         void BeginTransaction();
         void SaveChanges();
         void Commit();
         void Rollback();
 
+        //Contexto de la base de datos
         ContextoDB ContextoAuthDB();
 
+        //Configuración contenida en el appsettings
         IConfiguration ConfigurationAppSettings();
 
 
-        //Query
+        //Query: Repositorios que permiten ejecutar consultas sobre la base de datos
         IRepositoryBaseQuery<Descuento> RepositoryDescuentoQuery();
         IRepositoryBaseQuery<OrdenCompra> RepositoryOrdenCompraQuery();
         IRepositoryBaseQuery<OrdenCompraDetalle> RepositoryOrdenCompraDetalleQuery();
@@ -34,7 +42,7 @@ namespace Ordenes.Dominio.IUnitOfWorks
 
 
 
-        //Command
+        //Command: Repositorios que permiten ejecutar comandos sobre la base de datos
         IRepositoryBaseCommand<OrdenCompra> RepositoryOrdenCompraCommand();
         IRepositoryBaseCommand<OrdenCompraDetalle> RepositoryOrdenCompraDetalleCommand();
         IRepositoryBaseCommand<OrdenCompraEstado> RepositoryOrdenCompraEstadoCommand();
@@ -43,13 +51,13 @@ namespace Ordenes.Dominio.IUnitOfWorks
 
 
 
-        //Log
+        //Log: Repositorios de auditoría
         IRepositoryBaseQuery<_AuditoriaOrdenes> RepositoryLogQuery();
         IRepositoryBaseCommand<_AuditoriaOrdenes> RepositoryLogCommand();
         
 
 
-        //Utils
+        //Utils: Interfaz usada para la transformación y conversión de entidades
         IUtils Utils();
     }
 }

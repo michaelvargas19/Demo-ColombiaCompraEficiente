@@ -10,12 +10,20 @@ using System;
 namespace Catalogos.Infraestructura.UnitOfWorks
 {
 
+    /// <summary>
+    /// UnitOfWork implementa la interfaz IUnitOfWork, la cual contiene
+    /// instancias de los repositorios, servicios útiles, acceso al appsettings.json
+    /// y contexto de la base de datos
+    /// </summary>
+    
     public class UnitOfWork : IUnitOfWork
     {
+
         private readonly ContextoDB _contexto;
+
         private readonly IConfiguration configuration;
 
-
+        //Query: Repositorios que permiten ejecutar consultas sobre la base de datos
         private IRepositoryBaseQuery<Catalogo> _RepositoryCatalogoQuery;
         private IRepositoryBaseQuery<Descuento> _RepositoryDescuentoQuery;
         private IRepositoryBaseQuery<MultimediaCatalogo> _RepositoryMultimediaCatalogoQuery;

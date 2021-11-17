@@ -24,6 +24,12 @@ namespace Ordenes.Dominio.Services.Command
             this._utils = utils;
         }
 
+
+        /// <summary>
+        /// Permite crear una orden de compra para un usuario
+        /// </summary>
+        /// <param name="cmd">Orden de compra </param>
+        /// <returns>Orden de compra actualizada</returns>
         public OrdenCompraCmd CrearOrdenCompra(OrdenCompraCmd cmd)
         {
             
@@ -69,17 +75,32 @@ namespace Ordenes.Dominio.Services.Command
 
         }
 
+        /// <summary>
+        /// Permite remover la orden de compra
+        /// </summary>
+        /// <param name="orden"></param>
+        /// <returns>Orden de compra removida</returns>
         public OrdenCompraCmd RemoverOrdenCompra(OrdenCompraCmd orden)
         {
             throw new NotImplementedException();
         }
 
-
+        /// <summary>
+        /// Permite actualizar la orden de compra de un usuario
+        /// </summary>
+        /// <param name="orden"></param>
+        /// <returns>Orden de compra actualizada</returns>
         public OrdenCompraCmd ActualizarOrdenCompra(OrdenCompraCmd orden)
         {
             throw new NotImplementedException();
         }
 
+
+        /// <summary>
+        /// Permite agregar un item a una orden de compra
+        /// </summary>
+        /// <param name="detalle"></param>
+        /// <returns>Orden de compra actualizada</returns>
         public OrdenCompraCmd AgregarDetalle(OrdenCompraDetalleCmd detalle)
         {
             try
@@ -139,12 +160,22 @@ namespace Ordenes.Dominio.Services.Command
         }
 
 
+        /// <summary>
+        /// Permite actualizar el item de una orden de compra
+        /// </summary>
+        /// <param name="detalle"></param>
+        /// <returns>Orden de compra actualizada</returns>
         public OrdenCompraCmd ActualizarDetalle(OrdenCompraDetalleCmd detalle)
         {
             throw new NotImplementedException();
         }
-      
 
+
+        /// <summary>
+        /// Permite remover item de una orden de compra
+        /// </summary>
+        /// <param name="detalle"></param>
+        /// <returns>Orden de compra actualizada</returns>
         public OrdenCompraCmd RemoverDetalle(OrdenCompraDetalleCmd detalle)
         {
             try
@@ -187,11 +218,7 @@ namespace Ordenes.Dominio.Services.Command
                     throw new Exception("No hay disponibilidad del número de unidades solicitadas.");
                 }
 
-                
-
-
-
-                
+                               
 
                 orden = _ufw.RepositoryOrdenCompraQuery().Find(new OrdenCompraSpecification(detalle.idUsuario)).FirstOrDefault();
 

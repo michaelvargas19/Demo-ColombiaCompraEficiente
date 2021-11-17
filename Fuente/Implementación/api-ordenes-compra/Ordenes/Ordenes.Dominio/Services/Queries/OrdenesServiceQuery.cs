@@ -24,7 +24,11 @@ namespace Ordenes.Dominio.Services.Queries
             this._utils = utils;
         }
 
-
+        /// <summary>
+        /// Permite consultar la orden de compra de un usuario
+        /// </summary>
+        /// <param name="idUsuario"></param>
+        /// <returns>orden de compra del usuario</returns>
         public OrdenCompraQuery ConsultarOrdenCompraPorUsuario(int idUsuario)
         {
 

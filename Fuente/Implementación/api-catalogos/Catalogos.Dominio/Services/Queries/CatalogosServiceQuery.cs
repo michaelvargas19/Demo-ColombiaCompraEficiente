@@ -11,6 +11,13 @@ using System.Text;
 
 namespace Catalogos.Dominio.Services.Queries
 {
+    /// <summary>
+    /// Esta clase implementa los métodos firmados en la interfaz
+    /// ICatalogosServiceQuery haciendo uso de del patrón Unit Of Work
+    /// para acceder a los repositorios que que consultan información
+    /// de los catálogos
+    /// </summary>
+    
     public class CatalogosServiceQuery : ICatalogosServiceQuery
     {
         private readonly IUnitOfWork _ufw;
@@ -23,6 +30,12 @@ namespace Catalogos.Dominio.Services.Queries
             this._utils = utils;
         }
 
+
+
+        /// <summary>
+        /// Retorna los catálogos del sistema
+        /// </summary>
+        /// <returns>Catálogos encontrados</returns>
         public IEnumerable<CatalogoQuery> VerCatalogos()
         {
             IEnumerable<CatalogoQuery> catalogosQ = null;
@@ -42,6 +55,12 @@ namespace Catalogos.Dominio.Services.Queries
             return catalogosQ;
         }
 
+
+        /// <summary>
+        /// Permite consultar un catálogo apartir del código
+        /// </summary>
+        /// <param name="codigo">Código del catálogo</param>
+        /// <returns>Catálogo encontrado</returns>
         public CatalogoQuery verCatalogoPorCodigo(string codigo)
         {
             CatalogoQuery catalogoQ = null;
@@ -70,7 +89,12 @@ namespace Catalogos.Dominio.Services.Queries
         }
 
 
-
+        /// <summary>
+        /// Permite consultar los catálogos de firma pagináda
+        /// </summary>
+        /// <param name="skip">Número de registros a omitir</param>
+        /// <param name="take">Número de registros a tomar</param>
+        /// <returns>Catálogos encontrados</returns>
         public IEnumerable<CatalogoQuery> verPaginacion(int skip, int take)
         {
             if (take <= 0) { throw new Exception("La variable take debe tener valor positivo"); }

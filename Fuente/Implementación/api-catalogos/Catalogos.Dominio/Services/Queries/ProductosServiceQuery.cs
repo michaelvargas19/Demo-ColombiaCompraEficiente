@@ -11,6 +11,12 @@ using System.Text;
 
 namespace Catalogos.Dominio.Services.Queries
 {
+    /// <summary>
+    /// Esta clase implementa los métodos firmados en la interfaz
+    /// IProductosServiceQuery haciendo uso de del patrón Unit Of Work
+    /// para acceder a los repositorios que que consultan información
+    /// de los catálogos
+    /// </summary>
     public class ProductosServiceQuery : IProductosServiceQuery
     {
 
@@ -24,6 +30,13 @@ namespace Catalogos.Dominio.Services.Queries
             this._utils = utils;
         }
 
+
+        /// <summary>
+        /// Permite consultar los productos de forma paginada
+        /// </summary>
+        /// <param name="skip">Número de registros a omitir</param>
+        /// <param name="take">Número de registros a tomar</param>
+        /// <returns>Productos encontrados</returns>
         public IEnumerable<ProductoQuery> verPaginacion(int skip, int take)
         {
             if (take <= 0) { throw new Exception("La variable take debe tener valor positivo"); }
@@ -45,6 +58,12 @@ namespace Catalogos.Dominio.Services.Queries
             return productosQ;
         }
 
+
+        /// <summary>
+        /// Permite consultar el producto por código
+        /// </summary>
+        /// <param name="id">Identificador del código</param>
+        /// <returns>Producto encontrado</returns>
         public ProductoQuery verProductoPorCodigo(int id)
         {
             ProductoQuery productoQ = null;
@@ -71,6 +90,11 @@ namespace Catalogos.Dominio.Services.Queries
             return productoQ;
         }
 
+        /// <summary>
+        /// Permite consultar un producto por el código SKU
+        /// </summary>
+        /// <param name="sku">Código SKU del producto</param>
+        /// <returns>Producto encontrado</returns>
         public ProductoQuery verProductoPorSKU(string sku)
         {
             ProductoQuery productoQ = null;
@@ -98,6 +122,14 @@ namespace Catalogos.Dominio.Services.Queries
             return productoQ;
         }
 
+
+        /// <summary>
+        /// Permite consultar los productos de un catálogo deacuerdo a la calificación
+        /// </summary>
+        /// <param name="idCatalogo">Identificador del ca´tálogo</param>
+        /// <param name="skip">Número de registros a omitir</param>
+        /// <param name="take">Número de registros a tomar</param>
+        /// <returns>Productos encontrados</returns>
         public IEnumerable<ProductoQuery> verRankingCatalogo(int idCatalogo, int skip, int take)
         {
             if (take <= 0) { throw new Exception("La variable take debe tener valor positivo"); }
@@ -122,6 +154,14 @@ namespace Catalogos.Dominio.Services.Queries
 
         }
 
+
+        /// <summary>
+        /// Permite consultar productos apartir de una cadena de texto
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <param name="skip"></param>
+        /// <param name="take"></param>
+        /// <returns>Productos encontrados</returns>
         public IEnumerable<ProductoQuery> verRankingFullText(string texto, int skip, int take)
         {
             if (take <= 0) { throw new Exception("La variable take debe tener valor positivo"); }
@@ -143,6 +183,14 @@ namespace Catalogos.Dominio.Services.Queries
             return productosQ;
         }
 
+
+        /// <summary>
+        /// Permite consultar productos apartir de una marca
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <param name="skip"></param>
+        /// <param name="take"></param>
+        /// <returns>Productos encontrados</returns>
         public IEnumerable<ProductoQuery> verRankingMarca(string marca, int skip, int take)
         {
             if (take <= 0) { throw new Exception("La variable take debe tener valor positivo"); }

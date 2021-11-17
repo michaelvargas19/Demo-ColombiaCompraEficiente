@@ -13,13 +13,19 @@ using System.Text;
 
 namespace Ordenes.Dominio.UnitOfWorks
 {
+    /// <summary>
+    /// UnitOfWork implementa la interfaz IUnitOfWork, la cual contiene
+    /// instancias de los repositorios, servicios útiles, acceso al appsettings.json
+    /// y contexto de la base de datos
+    /// </summary>
+
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ContextoDB _contexto;
         private readonly IConfiguration configuration;
 
 
-        //Query
+        //Query: Repositorios que permiten ejecutar consultas sobre la base de datos
         private IRepositoryBaseQuery<Descuento> _RepositoryDescuentoQuery;
         private IRepositoryBaseQuery<OrdenCompra> _RepositoryOrdenCompraQuery;
         private IRepositoryBaseQuery<OrdenCompraDetalle> _RepositoryOrdenCompraDetalleQuery;
@@ -29,7 +35,7 @@ namespace Ordenes.Dominio.UnitOfWorks
         private IRepositoryBaseQuery<Usuario> _RepositoryUsuarioQuery;
         private IRepositoryBaseQuery<_AuditoriaOrdenes> _RepositoryLogQuery;
 
-        //Command
+        //Command: Repositorios que permiten ejecutar comandos sobre la base de datos
         private IRepositoryBaseCommand<Descuento> _RepositoryDescuentoCommand;
         private IRepositoryBaseCommand<OrdenCompra> _RepositoryOrdenCompraCommand;
         private IRepositoryBaseCommand<OrdenCompraDetalle> _RepositoryOrdenCompraDetalleCommand;
