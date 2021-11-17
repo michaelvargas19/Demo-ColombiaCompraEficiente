@@ -16,5 +16,15 @@ compra de dichos productos.
   - api-catalogos
   - api-ordenesCompra
   - portalWeb
+  
 - Documentos
+  - BITACORA_DESPLIEGUE.xlsx
+  - SAD 4+1.pdf
+
 - Fuente
+  - Diseño
+  - Implementación
+    - api-autenticacion
+    - api-catalogos
+    - api-ordenes-compra
+    - portalWeb
