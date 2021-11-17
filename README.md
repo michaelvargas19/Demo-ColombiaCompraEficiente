@@ -10,21 +10,28 @@ compra de dichos productos.
 
 ## Contenido del repositorio
 
-- Compilado
+- **Compilado**
   - SQL
   - api-autenticación
   - api-catalogos
   - api-ordenesCompra
   - portalWeb
   
-- Documentos
+- **Documentos**
   - BITACORA_DESPLIEGUE.xlsx
   - SAD 4+1.pdf
 
-- Fuente
+- **Fuente**
   - Diseño
   - Implementación
     - api-autenticacion
     - api-catalogos
     - api-ordenes-compra
     - portalWeb
+
+# Componentes de la solución
+![imagen no disponible](https://github.com/michaelvargas19/Demo-ColombiaCompraEficiente/blob/master/Fuente/Dise%C3%B1o/Diagrama%20de%20Componentes.png?raw=true)
+
+
+*Michael Vargas*
+© 2021
