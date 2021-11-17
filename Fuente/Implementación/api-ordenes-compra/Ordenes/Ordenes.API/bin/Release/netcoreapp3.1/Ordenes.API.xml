@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ordenes.API</name>
+    </assembly>
+    <members>
+        <member name="M:Ordenes.API.Controllers.OrdenesController.verOrden(System.Int32)">
+            <summary>Consultar carrito de compras</summary>
+            <param name="idUsuario">Identificador del usuario</param>
+            <returns>Catálogo correspondiente</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="202">Solicitud no procesada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Ordenes.API.Controllers.OrdenesController.AgregarOrden(Ordenes.Dominio.Modelo.RequestBase{Ordenes.Dominio.Modelo.Command.OrdenCompraCmd})">
+            <summary>Agregar una orden de compra</summary>
+            <param name="request">Datos de la solicitud</param>
+            <returns>Rsultado</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Ordenes.API.Controllers.OrdenesController.AgregarOrdenDetalle(Ordenes.Dominio.Modelo.RequestBase{Ordenes.Dominio.Modelo.Command.OrdenCompraDetalleCmd})">
+            <summary>Agregar producto a una orden</summary>
+            <param name="request">Datos de la solicitud</param>
+            <returns>Rsultado</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+        <member name="M:Ordenes.API.Controllers.OrdenesController.EliminarOrdenDetalle(Ordenes.Dominio.Modelo.RequestBase{Ordenes.Dominio.Modelo.Command.OrdenCompraDetalleCmd})">
+            <summary>Eliminar un producto de una orden</summary>
+            <param name="request">Datos de la solicitud</param>
+            <returns>Rsultado</returns>
+            <response code="200">Solicitud procesada</response>
+            <response code="400">Problemas con la solicitud</response>
+            <response code="401">Falta de permisos</response>
+            <response code="500">Error Interno</response>
+        </member>
+    </members>
+</doc>

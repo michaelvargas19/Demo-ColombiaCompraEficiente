@@ -71,4 +71,3 @@ C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implemen
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.API\obj\Debug\netcoreapp3.1\Ordenes.API.dll
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.API\obj\Debug\netcoreapp3.1\Ordenes.API.pdb
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.API\obj\Debug\netcoreapp3.1\Ordenes.API.genruntimeconfig.cache
-C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.API\obj\Debug\netcoreapp3.1\Ordenes.API.csproj.CopyComplete

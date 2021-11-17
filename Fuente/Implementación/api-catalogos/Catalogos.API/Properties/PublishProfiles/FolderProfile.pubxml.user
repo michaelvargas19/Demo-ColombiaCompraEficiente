@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Publicaciones\api-catalogos</_PublishTargetUrl>
+    <History>True|2021-11-17T18:33:46.3160253Z;</History>
+  </PropertyGroup>
+</Project>

@@ -316,7 +316,6 @@ C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implemen
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-autenticacion\Autenticacion.API\obj\Release\netcoreapp3.1\staticwebassets\Autenticacion.API.StaticWebAssets.xml
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-autenticacion\Autenticacion.API\obj\Release\netcoreapp3.1\scopedcss\bundle\Autenticacion.API.styles.css
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-autenticacion\Autenticacion.API\obj\Release\netcoreapp3.1\Autenticacion.API.RazorTargetAssemblyInfo.cache
-C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-autenticacion\Autenticacion.API\obj\Release\netcoreapp3.1\Autenticacion.API.csproj.CopyComplete
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-autenticacion\Autenticacion.API\obj\Release\netcoreapp3.1\Autenticacion.API.dll
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-autenticacion\Autenticacion.API\obj\Release\netcoreapp3.1\Autenticacion.API.pdb
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-autenticacion\Autenticacion.API\obj\Release\netcoreapp3.1\Autenticacion.API.genruntimeconfig.cache

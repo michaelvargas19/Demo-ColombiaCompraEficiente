@@ -10,4 +10,3 @@ C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implemen
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.csproj.AssemblyReference.cache
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.dll
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.pdb
-C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-ordenes-compra\Ordenes\Ordenes.Dominio\obj\Debug\netcoreapp3.1\Ordenes.Dominio.csproj.CopyComplete

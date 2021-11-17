@@ -28,3 +28,4 @@ C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implemen
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Infraestructura\obj\Debug\netcoreapp3.1\Catalogos.Infraestructura.dll
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Infraestructura\obj\Debug\netcoreapp3.1\Catalogos.Infraestructura.pdb
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Infraestructura\obj\Debug\netcoreapp3.1\Catalogos.Infraestructura.genruntimeconfig.cache
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Infraestructura\obj\Debug\netcoreapp3.1\Catalogos.Infraestructura.csproj.AssemblyReference.cache

@@ -35,3 +35,4 @@ C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implemen
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Dominio\obj\Debug\netcoreapp3.1\Catalogos.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Dominio\obj\Debug\netcoreapp3.1\Catalogos.Dominio.dll
 C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Dominio\obj\Debug\netcoreapp3.1\Catalogos.Dominio.pdb
+C:\Users\mavargasb\Documents\GitHub\Demo-ColombiaCompraEficiente\Fuente\Implementación\api-catalogos\Catalogos.Dominio\obj\Debug\netcoreapp3.1\Catalogos.Dominio.csproj.CopyComplete
